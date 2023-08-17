@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.goal {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: greenyellow;
+    border: 3px solid green;
+    top: 0;
+    left: calc(50% - 50px);
+}
+
+.goal:hover {
+    animation: blup 0.1s 1 ease backwards;
+}
+
+.start {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: orange;
+    border: 3px solid red;
+    bottom: 0;
+    left: calc(50% - 50px);
+}
+
+.start:active {
+    animation: blup 0.1s 1 ease backwards;
+}
+
+@keyframes blup {
+    0% {
+        transform: scaleX(0.8);
+    }
+    50% {
+        transform: scaleX(1.5);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
